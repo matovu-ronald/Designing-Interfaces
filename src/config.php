@@ -12,4 +12,4 @@ function autoloader($class_name)
 
 spl_autoload_register('autoloader');
 
-$repo = new jsonRepository(__DIR__ . '/src/database.json');
+$repo = new jsonRepository(__DIR__ . '/database.json');
