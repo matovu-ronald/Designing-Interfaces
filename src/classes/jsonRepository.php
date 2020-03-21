@@ -12,6 +12,15 @@ class jsonRepository implements RepositoryInterface
     public function all($entity)
     {
         $data = json_decode(file_get_contents($this->file));
-        return $data->entity;
+        return $data->$entity;
+    }
+
+    public function find($entity, $value, $field = 'id')
+    {
+        foreach($this->all($entity) as $key => $data) {
+            if ($data->$field == $value) {
+                return array($data);
+            }
+        }
     }
 }
