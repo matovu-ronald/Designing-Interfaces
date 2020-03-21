@@ -2,7 +2,7 @@
 
 <footer class="footer">
     <div class="container">
-        <p class="pull-left text-muted">by Alena Holligan at Treehouse</p>
+        <p class="pull-left text-muted">by Matovu Ronald</p>
     </div>
 </footer>
 </body>
