@@ -13,6 +13,15 @@ class Posts extends Collection implements SharableInterface, TrackableInterface
         $this->entity = 'posts';
     }
 
+    public function getTitle()
+    {
+        if ($this->count() == 1) {
+            return $this->current()->title;
+        }
+
+        return "Latest Posts";
+    }
+
     public function getAuthor()
     {
         $user = $this->repo->find('users', $this->current()->author)[0];
